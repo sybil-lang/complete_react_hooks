@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 
-const MemoHook = () => {
+const MemoHookIssue = () => {
   const [myNum, setMyNum] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -15,19 +15,19 @@ const MemoHook = () => {
     return num;
   };
 
-//   const CheckData = () => {
-//     return countNumber(myNum);
-//   };
-  const CheckData = useMemo(() => {
+  const CheckData = () => {
     return countNumber(myNum);
-  }, [myNum]);
+  };
+  // const CheckData = useMemo(() => {
+  //   return countNumber(myNum);
+  // }, [myNum]);
 
   return (
     <Wrapper>
       <button onClick={getValue} style={{ backgroundColor: "red" }}>
         Counter
       </button>
-      <p> My new number : {CheckData} </p>
+      <p> My new number : {<CheckData/>} </p>
       <button onClick={() => setShow(!show)}>
         {show ? "You clicked me" : "Click me plz"}
       </button>
@@ -44,4 +44,4 @@ const Wrapper = styled.section`
   font-size: 2.4rem;
 `;
 
-export default MemoHook;
+export default MemoHookIssue;

@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 const AppContext = createContext();
-
+// console.log("appContext",AppContext);
 const AppProvider = ({ children }) => {
   const userData = {
     name: "vinod",

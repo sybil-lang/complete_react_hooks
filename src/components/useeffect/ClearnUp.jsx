@@ -10,6 +10,7 @@ const ClearUp = () => {
 
   useEffect(() => {
     window.addEventListener("resize", currentScreenWidth);
+    //callaback
     return () => {
       window.removeEventListener("resize", currentScreenWidth);
     };

@@ -8,7 +8,7 @@ const RefHook1 = () => {
   const [userInput, setUserInput] = useState("");
   // const [count, setCount] = useState();
   const count = useRef(0);
-  // console.log("🚀 ~ file: RefHook1.jsx ~ line 11 ~ RefHook1 ~ count", count);
+  console.log("🚀 ~ file: RefHook1.jsx ~ line 11 ~ RefHook1 ~ count", count);
 
   useEffect(() => {
     // setCount(count + 1);
